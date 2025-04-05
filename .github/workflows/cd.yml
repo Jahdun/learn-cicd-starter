@@ -33,4 +33,4 @@ jobs:
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-455921/notely-ar-repo/notely:latest .
 
       - name: Deploy to Cloud Run
-        run: gcloud run deploy notely --image us-central1-docker.pkg.dev/notely-455921/notely-ar-repo/notely@sha256:7ef425eed7290cd9d519c49a1313e40023f370946fe19a4e21a5858dcd39b206 --region us-central1 --allow-unauthenticated --project notely-455921  --max-instances=4
+        run: gcloud run deploy notely --image us-central1-docker.pkg.dev/notely-455921/notely-ar-repo/notely:latest . --region us-central1 --allow-unauthenticated --project notely-455921 --max-instances=4
